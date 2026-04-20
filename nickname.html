@@ -1,0 +1,62 @@
+<!DOCTYPE html><html>
+<head>
+<title>Nickname Calculator</title>
+<style>
+body {
+font-family: Arial;
+text-align: center;
+background: #f2f2f2;
+padding: 30px;
+background-image: -moz-linear-gradient(#3ffbf5);
+}    
+h1 {
+  color: #333;
+  padding: 10px;
+ }                                                                                  
+                                                                                                                                                                    width: 200px;
+                                                                                                                    font-size : 16px;
+                                                                                                                        
+button {
+                                                                                                                                    padding: 10px 20px;
+                                                                                                                                            margin-top: 10px;
+                                                                                                                                                    font-size: 16px;
+                                                                                                                                                            background: #4CAF50;
+                                                                                                                                                                    color: white;
+                                                                                                                                                                            border: none;
+                                                                                                                                                                                    border-radius: 5px;
+                                                                                                                                                                                        }
+
+                                                                                                                                                                                            #result {
+                                                                                                                                                                                                    margin-top: 20px;
+                                                                                                                                                                                                            font-size: 20px;
+                                                                                                                                                                                                                    color: #444;
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                        </style>
+
+                                                                                                                                                                                                                        </head><body><h1>Nickname Calculator 😄</h1>
+
+                                                                                                                                                                                                                        <input type="text" id="name" placeholder="Enter your name">
+                                                                                                                                                                                                                        <br><br>
+                                                                                                                                                                                                                        <button onclick="generateNickname()">Generate</button>
+
+                                                                                                                                                                                                                        <div id="result"></div>
+
+                                                                                                                                                                                                                        <script>
+                                                                                                                                                                                                                            function generateNickname() {
+                                                                                                                                                                                                                                    let name = document.getElementById("name").value;
+
+                                                                                                                                                                                                                                            let nicknames = ["Star 🌟", "Boss 😎", "King 👑", "Queen 👑", "Hero 💪", "Legend 🔥"];
+
+                                                                                                                                                                                                                                                    let random = Math.floor(Math.random() * nicknames.length);
+
+                                                                                                                                                                                                                                                            let nickname = name + " " + nicknames[random];
+
+                                                                                                                                                                                                                                                                    let score = name.length * 10;
+
+                                                                                                                                                                                                                                                                            document.getElementById("result").innerHTML =
+                                                                                                                                                                                                                                                                                        "Nickname: <b>" + nickname + "</b><br>Score: " + score + "%";
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                            </script>
+
+                                                                                                                                                                                                                                                                                            </body>
+                                                                                                                                                                                                                                                                                            </html>
